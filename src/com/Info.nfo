@@ -1,0 +1,21 @@
+hello everyone, i hope you've got a nice day and night, today we'll gonna work on the GUI part in order to get the chat a
+little bit more funny than yet !!
+
+We need to link the view to the Client that's why we make the Client an attribute of the view, given in the parameters !!
+
+Now we will try to open the frame !! we have to remember that we have to launch the server first !
+
+ok so the good news is that the server recognize the client_GUI 
+we will try to improve the view now !
+
+Now we will make the ActionListeners of the JMenu !
+
+the ActionQuit Works fine
+
+so now we can set the username in order to be allowed to send our messages to the server, so we finnaly got the connection between
+the GUI and the Server !
+
+now the problem is to place the messages through the GUI 
+I will try a new thing please be kind with me :P
+
+We'll see now if i made it first Try ! 
