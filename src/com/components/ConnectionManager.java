@@ -18,6 +18,11 @@ public class ConnectionManager implements Runnable {
 		return this._serverSocket;
 	}
 
+	public ArrayList<Socket> get_Client()
+	{
+		return this._client;
+	}
+	
 	@Override
 	public void run() {
 		System.out.println("[SERVER] INIT DONE !");
@@ -32,6 +37,7 @@ public class ConnectionManager implements Runnable {
 				// DATA Treatment :)
 				_client.add(socket);
 				// TODO : Fix Me !
+				new Thread(new CommandListener(this)).start();
 				new Thread(new ClientManager(_client, socket)).start();
 
 			}
