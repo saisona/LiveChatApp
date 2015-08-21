@@ -38,6 +38,7 @@ public class LCA_view extends JFrame{
 	private JTextField _input;
 	private JButton	_send;
 	private JButton	_emo;
+	private JButton	_co;
 	private JLabel _color;
 	private JComboBox _colors;
 	
@@ -58,6 +59,7 @@ public class LCA_view extends JFrame{
 		_inputs = new JPanel();
 		_adds = new JPanel();
 		_send = new JButton("Send");
+		_co = new JButton("INFO");
 		_emo = new JButton(new ImageIcon(LCA_Const.ICON_EMO));
 		_color = new JLabel("Color :");
 		
@@ -87,6 +89,7 @@ public class LCA_view extends JFrame{
 	
 		_adds.add(_color, BorderLayout.WEST);
 		_adds.add(_colors, BorderLayout.CENTER);
+		_adds.add(_co,BorderLayout.BEFORE_FIRST_LINE);
 		//_adds.setLayout(new BorderLayout(2,0));
 		_adds.setBackground(new Color(140, 140, 147));
 
@@ -129,6 +132,7 @@ public class LCA_view extends JFrame{
 		_newAccount.addActionListener(new ActionNewAccount(_client));
 		_newConnection.addActionListener(new ActionChangeConnection(_client));
 		_ServerList.addActionListener(new ActionChangeServer(_client));
+		_co.addActionListener(new LCA_viewCo(this));
 		_quit.addActionListener(new ActionQuit(_client));
 	}
 	

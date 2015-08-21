@@ -16,7 +16,7 @@ public class LCA_Const {
 	 */
 	
 	public static final int BUFFER_CS_SIZE = 25;
-	public static final String LOCALHOST = "localhost";
+	public static final String LOCALHOST = "192.168.0.42";
 	public static final String LOCALSERVERPORT = "4244";
 	public static final int LOCALSPORT = 4244;
 	public static final URL ICON_EMO = LCA_Const.class.getClassLoader().getResource("emo.png");

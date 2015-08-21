@@ -41,4 +41,8 @@ public class CS_Message implements Serializable {
 		_exp = nwExp;
 	}
 	
+	public String toString()
+	{
+		return (_exp +" : "+(_msgToSend.getText()));
+	}
 }

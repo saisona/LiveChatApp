@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 import com.client.ihm.view.LCA_view;
 
 public class ReceivedManager implements Runnable {
@@ -27,8 +30,15 @@ public class ReceivedManager implements Runnable {
 				_view.getInfoPanel().printMessagesIntoPanel();
 			}
 		} catch (IOException e) {
-			System.err.println("\n[SERVER] The server may have been closed !");
-			System.exit(-1);
+			JFrame jf = new JFrame("[SERVER] ERROR 4242");
+			JLabel lbl = new JLabel("[SERVER] You have been Disconnected from the Server");
+			jf.getContentPane().add(lbl);
+			_view.dispose();
+			
+			jf.pack();
+			jf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			jf.setVisible(true);
+			System.err.println("[SERVER] The server may have been closed !");
 		} catch (ClassNotFoundException e) {
 			// NOTHING TO PRINT HERE BECAUSE IT CAN'T HAPPEN !
 		}
